@@ -1,18 +1,15 @@
-The [Stanford classifier](http://nlp.stanford.edu/software/classifier.shtml "stanford classifier") is one of the most powerful free classifying libraries available. Given the right amount of data, it can be used to classify blocks of texts with good accuracy. This post is about integrating and using the Stanford Classifier with Node.js. 
-
-## Getting started
-Install the `stanford-classifier` Node.js module from the npm repository. The `stanford-classifier` Node.js module uses **Stanford Classifier v3.5.2** internally and has `node-java` as a dependecy. Your environment should have Java properly configured to work with `node-java`. To install the `stanford-classifier` run the following in the terminal:
+## Getting Started
+Install the `stanford-classifier` Node.js module from the npm repository. The `stanford-classifier` Node.js module uses **Stanford Classifier v3.5.2** internally and has `node-java` as a dependency. Your environment should have Java properly configured to work with `node-java`. You can learn more about `node-java` configurations [here](https://github.com/joeferner/node-java). To install the `stanford-classifier` run the following in the terminal:
 ```
 npm install stanford-classifier --save
 ```
-The module will appear in the projects root node_modules directory. 
+The module will appear in the projects root node_modules directory. The Node.js module can be viewed in the npm repository https://www.npmjs.com/package/stanford-classifier.
 
-## Training The Classifier
-The classifier needs to be trained with pre-trained data. Without trained data, the classifier will not work as expected and will not be accurate. Regardless of which classification algorithm is being used, Naive Bayes or max entropy, the classifier needs a robust dataset to yield accurate classifications. I built a small dataset that contains organization and band Twitter descriptions. The dataset can be used to train the `stanford-classifier`. It can be downloaded from the Gist below. 
-<script src="https://gist.github.com/mbejda/e57d29c887cbda0b5a8f.js"></script>
+## Dataset
+The classifier needs to be trained with pre-trained data. Without trained data, the classifier will not work as expected and will not be accurate. Regardless of which classification algorithm is being used, the classifier needs a robust dataset to yield accurate classifications. I built a small dataset that contains organization and band Twitter descriptions. The dataset can be used to train the `stanford-classifier`. It can be downloaded [here](https://gist.github.com/mbejda/e57d29c887cbda0b5a8f#file-band-or-organization).
 
-## Classifying With The Classifier
-The `train()` method is used to train the `stanford-classifier` with the pre-trained dataset. Here is an example of how to use the `train()` method to train the `stanford-classifier`.
+## Training And Classifying The Classifier
+The `train()` method is used to train the `stanford-classifier` with a pre-trained dataset. Here is an example of how to use the `train()` method to train the `stanford-classifier`.
 
 *Example :*
 ```
@@ -52,7 +49,7 @@ stream.on('end', function() {
 /// BAND
 });
 ```
-After the classifier has been trained, the `syncClassifier()` method syncs the trained dataset with the classifier. 
+After the classifier has been trained use the `syncClassifier()` method to sync the trained dataset with the classifier.
 
 
 ## Customizing The Classifier
@@ -60,7 +57,7 @@ Options can be sent directly to the classifier when initializing the `stanford-c
 ```
 var sc = new stanfordClassifier(options);
 ```
-The options can either be a path to a property file or an object with options. The default options are the following : 
+The options can either be a path to a property file or an object. The default options are the following :
 ```
 #
 # Features
@@ -92,10 +89,28 @@ tolerance=1e-4
 
 ```
 
-other options can be used are [here](http://nlp.stanford.edu/nlp/javadoc/javanlp/edu/stanford/nlp/classify/ColumnDataClassifier.html "stanford classifer").
+other options that can be used are [here](http://nlp.stanford.edu/nlp/javadoc/javanlp/edu/stanford/nlp/classify/ColumnDataClassifier.html "stanford classifer").
 
-If you need any help, send me a tweet on twitter
-[@notmilobejda]('https://twitter.com/notmilobejda).
+<hr>
+## Resources
+**NPM Repository :**<br>
+[https://www.npmjs.com/package/stanford-classifier](https://www.npmjs.com/package/stanford-classifier)
+<br>
+**Github Repository:**<br>
+[https://github.com/mbejda/Nodejs-Stanford-Classifier](https://github.com/mbejda/Nodejs-Stanford-Classifier)<br>
+**Dataset:**<br>
+[https://gist.github.com/mbejda/e57d29c887cbda0b5a8f#file-band-or-organization](https://gist.github.com/mbejda/e57d29c887cbda0b5a8f#file-band-or-organization)<br>
 
-Enjoy*
+**Blog :**<br>
+[http://www.mbejda.com/using-the-stanford-classifier-with-node/](http://www.mbejda.com/using-the-stanford-classifier-with-node/)
+
+
+<br>
+If you need any help, send me a tweet on twitter<br>
+[@notmilobejda](https://twitter.com/notmilobejda).
+<br>
+[![NPM](https://nodei.co/npm/stanford-classifier.png)(https://nodei.co/npm/stanford-classifier/)
+
+
+
 
