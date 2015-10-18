@@ -1,0 +1,34 @@
+{
+  "name": "stanford-classifier",
+  "version": "1.0.1",
+  "description": "Nodejs wrapper for Stanford classifier.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbejda/Nodejs-Stanford-Classifier.git"
+  },
+  "keywords": [
+    "nlp",
+    "stanford nlp",
+    "classifier",
+    "natural",
+    "text",
+    "categorizer",
+    "nlp",
+    "classify",
+    "stanford classifier",
+    "stanford nlp"
+  ],
+  "author": "Milos Bejda <mbejda@live.com> (mbejda.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mbejda/Nodejs-Stanford-Classifier/issues"
+  },
+  "homepage": "https://github.com/mbejda/Nodejs-Stanford-Classifier#readme",
+  "dependencies": {
+    "node-java": "1.0.1"
+  }
+}
