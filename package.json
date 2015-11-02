@@ -1,6 +1,6 @@
 {
   "name": "stanford-classifier",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Nodejs wrapper for Stanford classifier.",
   "main": "index.js",
   "scripts": {
@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/mbejda/Nodejs-Stanford-Classifier#readme",
   "dependencies": {
-    "node-java": "1.0.1"
-  }
+    "java": "0.6.0"
+  },
+  "devDependencies": {}
 }
