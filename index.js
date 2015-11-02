@@ -20,24 +20,108 @@ var stanfordClassifier = function(properties) {
 stanfordClassifier.prototype.train = function(string) {
     var self = this;
     if(!string || string == ''){
-         throw new Error('Missing string')
+        throw new Error('Missing string');
+        return;
     }
-    self.dataSet.addSync(self.classifier.makeDatumFromStringsSync(string.split(' ')));
+    self.dataSet.addSync(self.classifier.makeDatumFromLineSync(string.replace(' ','\t')))
+};
+stanfordClassifier.prototype.trainAll = function(array) {
+    var self = this;
+    if(!array || !Array.isArray(array)){
+        throw new Error('Missing array');
+        return;
+    }
+    var datums = [];
+    var list = java.newInstanceSync("java.util.ArrayList");
+    array.forEach(function(string){
+        list.addSync(self.classifier.makeDatumFromLineSync(string.replace(' ','\t')))
+    });
+    self.dataSet.addAllSync(list)
 };
 stanfordClassifier.prototype.syncClassifier = function() {
     var self = this;
     if(!self.dataSet){
-        throw  new Error('No dataset found')
+        throw new Error('No dataset found');
+        return;
     }
     self.train =  self.classifier.makeClassifierSync(self.dataSet);
 };
 stanfordClassifier.prototype.classify = function(string) {
     var self = this;
     if(string == undefined || string == ''){
-        throw  new Error('Missing string')
+        throw new Error('Missing string');
+        return;
     }
-    var data = self.train.classOfSync(self.classifier.makeDatumFromStringsSync(string.split(' ')));
+    var data = self.train.classOfSync(self.classifier.makeDatumFromStringsSync(string.replace(/\t/g, ' ').split(' ')));
     return data;
+};
+stanfordClassifier.prototype.getDataArray = function() {
+    var self = this;
+    return self.dataSet.getDataArraySync()
+};
+stanfordClassifier.prototype.getValuesArray = function() {
+    var self = this;
+    return self.dataSet.getValuesArraySync();
+};
+stanfordClassifier.prototype.getFeatureCounts = function() {
+    var self = this;
+    return self.dataSet.getFeatureCountsSync();
+};
+stanfordClassifier.prototype.getLabelsArray = function() {
+    var self = this;
+    return self.dataSet.getLabelsArraySync();
+};
+stanfordClassifier.prototype.getLabelsArray = function() {
+    var self = this;
+    return self.dataSet.getLabelsArraySync();
+};
+stanfordClassifier.prototype.trimData = function() {
+    var self = this;
+    return self.dataSet.trimDataSync();
+};
+stanfordClassifier.prototype.trimLabels = function() {
+    var self = this;
+    return self.dataSet.trimLabelsSync();
+};
+stanfordClassifier.prototype.trimToSize = function(size) {
+    var self = this;
+    return self.dataSet.trimToSizeSync(size);
+};
+stanfordClassifier.prototype.numClasses = function() {
+    var self = this;
+    return self.dataSet.numClassesSync();
+};
+stanfordClassifier.prototype.numDatumsPerLabel = function() {
+    var self = this;
+    return self.dataSet.numDatumsPerLabelSync();
+};
+stanfordClassifier.prototype.numFeatures = function() {
+    var self = this;
+    return self.dataSet.numFeaturesSync();
+};
+stanfordClassifier.prototype.numFeatureTokens = function() {
+    var self = this;
+    return self.dataSet.numFeatureTokensSync();
+};
+stanfordClassifier.prototype.numFeatureTypes = function() {
+    var self = this;
+    return self.dataSet.numFeatureTypesSync();
+};
+stanfordClassifier.prototype.printSparseFeatureMatrix = function() {
+    var self = this;
+    return self.dataSet.printSparseFeatureMatrixSync();
+};
+stanfordClassifier.prototype.printSVMLightFormat = function() {
+    var self = this;
+    return self.dataSet.printSVMLightFormatSync();
+};
+stanfordClassifier.prototype.randomize = function(int) {
+    var self = this;
+    return self.dataSet.randomizeSync(int);
+};
+stanfordClassifier.prototype.size = function() {
+    var self = this;
+    return self.dataSet.sizeSync()
 };
 stanfordClassifier.prototype.summaryStatistics = function(string) {
     var self = this;

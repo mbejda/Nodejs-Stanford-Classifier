@@ -1,3 +1,51 @@
+# Major Updates :
+## Available Methods :
+```
+stanfordClassifier.train(string)
+
+stanfordClassifier.trainAll(array)
+
+stanfordClassifier.syncClassifier()
+
+stanfordClassifier.getDataArray()
+
+stanfordClassifier.getValuesArray()
+
+stanfordClassifier.getFeatureCounts()
+
+stanfordClassifier.getLabelsArray()
+
+stanfordClassifier.getLabelsArray()
+
+stanfordClassifier.trimData()
+
+stanfordClassifier.trimLabels()
+
+stanfordClassifier.trimToSize(int)
+
+stanfordClassifier.numClass()
+
+stanfordClassifier.numDatumsPerLabel()
+
+stanfordClassifier.numFeatures()
+
+stanfordClassifier.numFeatureTokens()
+
+stanfordClassifier.numFeatureTypes()
+
+stanfordClassifier.printSparseFeatureMatrix()
+
+stanfordClassifier.printSVMLightFormat()
+
+stanfordClassifier.randomize(int)
+
+stanfordClassifier.size()
+
+stanfordClassifier.summaryStatistics()
+
+```
+
+
 ## Getting Started
 Install the `stanford-classifier` Node.js module from the npm repository. The `stanford-classifier` Node.js module uses **Stanford Classifier v3.5.2** internally and has `node-java` as a dependency. Your environment should have Java properly configured to work with `node-java`. You can learn more about `node-java` configurations [here](https://github.com/joeferner/node-java). To install the `stanford-classifier` run the following in the terminal:
 ```
@@ -109,7 +157,7 @@ other options that can be used are [here](http://nlp.stanford.edu/nlp/javadoc/ja
 If you need any help, send me a tweet on twitter<br>
 [@notmilobejda](https://twitter.com/notmilobejda).
 <br>
-[![NPM](https://nodei.co/npm/stanford-classifier.png)(https://nodei.co/npm/stanford-classifier/)
+![NPM](https://nodei.co/npm/stanford-classifier.png)(https://nodei.co/npm/stanford-classifier/)
 
 
 
