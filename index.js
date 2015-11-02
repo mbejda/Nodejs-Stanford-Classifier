@@ -12,7 +12,7 @@ var stanfordClassifier = function(properties) {
         }
     }
     if (list == undefined) {
-        list = 'classifier/demo.prop';
+        list = __dirname+'/classifier/demo.prop';
     }
     self.classifier = java.newInstanceSync('edu.stanford.nlp.classify.ColumnDataClassifier', list);
     self.dataSet =   java.newInstanceSync("edu.stanford.nlp.classify.Dataset");
