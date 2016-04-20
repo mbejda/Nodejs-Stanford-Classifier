@@ -1,3 +1,3 @@
-Implementation-Version: 3.5.2
-Built-Date: 2015-04-20
+Implementation-Version: 3.6.0
+Built-Date: 2015-12-09
 Created-By: Stanford JavaNLP (jebolton)
