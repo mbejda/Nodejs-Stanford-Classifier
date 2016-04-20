@@ -29,7 +29,8 @@
   },
   "homepage": "https://github.com/mbejda/Nodejs-Stanford-Classifier#readme",
   "dependencies": {
-    "java": "0.6.0"
+    "java": "0.6.0",
+    "properties-reader": "0.0.15"
   },
-  "devDependencies": {}
+  "devDependencies": {"jasmine":"2.4.1"}
 }
