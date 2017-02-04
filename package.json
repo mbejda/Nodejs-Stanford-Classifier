@@ -1,6 +1,6 @@
 {
   "name": "stanford-classifier",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Nodejs wrapper for Stanford classifier.",
   "main": "index.js",
   "scripts": {
