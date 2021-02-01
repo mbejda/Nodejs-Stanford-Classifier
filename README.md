@@ -139,7 +139,7 @@ tolerance=1e-4
 
 other options that can be used are [here](http://nlp.stanford.edu/nlp/javadoc/javanlp/edu/stanford/nlp/classify/ColumnDataClassifier.html "stanford classifer").
 
-<hr>
+
 ## Resources
 **NPM Repository :**<br>
 [https://www.npmjs.com/package/stanford-classifier](https://www.npmjs.com/package/stanford-classifier)
@@ -153,12 +153,7 @@ other options that can be used are [here](http://nlp.stanford.edu/nlp/javadoc/ja
 [http://www.mbejda.com/using-the-stanford-classifier-with-node/](http://www.mbejda.com/using-the-stanford-classifier-with-node/)
 
 
-<br>
-If you need any help, send me a tweet on twitter<br>
+If you need any help, send me a tweet on twitter
 [@notmilobejda](https://twitter.com/notmilobejda).
-<br>
-![NPM](https://nodei.co/npm/stanford-classifier.png)(https://nodei.co/npm/stanford-classifier/)
 
-
-
-
+[![NPM](https://nodei.co/npm/stanford-classifier.png)](https://www.npmjs.com/package/stanford-classifier)
