@@ -60,7 +60,7 @@ The classifier needs to be trained with pre-trained data. Without trained data, 
 The `train()` method is used to train the `stanford-classifier` with a pre-trained dataset. Here is an example of how to use the `train()` method to train the `stanford-classifier`.
 
 *Example :*
-```
+```js
 /// Dependencies
 var stanfordClassifier = require('stanford-classifier');
 var byline = require('byline');
@@ -149,7 +149,7 @@ other options that can be used are [here](http://nlp.stanford.edu/nlp/javadoc/ja
 **Dataset:**<br>
 [https://gist.github.com/mbejda/e57d29c887cbda0b5a8f#file-band-or-organization](https://gist.github.com/mbejda/e57d29c887cbda0b5a8f#file-band-or-organization)<br>
 
-**Blog :**<br>
+**Blog:**<br>
 [http://www.mbejda.com/using-the-stanford-classifier-with-node/](http://www.mbejda.com/using-the-stanford-classifier-with-node/)
 
 
